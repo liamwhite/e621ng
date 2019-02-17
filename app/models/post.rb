@@ -1910,6 +1910,8 @@ class Post < ApplicationRecord
   include IqdbMethods
   include ValidationMethods
   include Danbooru::HasBitFlags
+  include Indexable
+  include PostIndex
 
   BOOLEAN_ATTRIBUTES = %w(
     has_embedded_notes
